@@ -8,37 +8,27 @@
 
 import UIKit
 
-protocol DataManipulator {
-
-}
-extension DataManipulator {
-    var dataController: DataController {
-        return DataController.shared
-    }
-}
-
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, DataManipulator {
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var firstname: UITextField!
     @IBOutlet weak var lastname: UITextField!
     
-    var dataController = DataController.shared
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
+    func create() -> ViewController {
+        let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+        return vc
+    }
     
     @IBAction func save(_ sender: UIButton) {
         
         let u = username.text ?? "Default"
         let f = firstname.text ?? "Default"
         let l = lastname.text ?? "Default"
-        
-        
         
         let user = User.createUser(withUserName: u, firstName: f, lastName: l, context: dataController.context)
         
@@ -49,7 +39,7 @@ class ViewController: UIViewController {
         }
         catch (let e) {
             print(e.localizedDescription)
-            UIAlertController.showSuccess(on: self, title: "Failed", message: "Some thing went wrong!!!")
+            UIAlertController.showSuccess(on: self, title: "Failed", message: e.localizedDescription)
 
         }
         

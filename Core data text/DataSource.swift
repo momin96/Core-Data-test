@@ -52,7 +52,9 @@ class UserDataSource<T>: GenericDataSource<T>, UITableViewDataSource, DataManipu
 
 class UserDelegate<T>: GenericDataSource<T>, UITableViewDelegate {
     
+    weak var weakController: UIViewController?
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    
     }
 }

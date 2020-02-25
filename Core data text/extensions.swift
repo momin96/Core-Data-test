@@ -9,6 +9,15 @@
 import Foundation
 import UIKit
 
+protocol DataManipulator {
+
+}
+extension DataManipulator {
+    var dataController: DataController {
+        return DataController.shared
+    }
+}
+
 extension UITextField {
     func clear () {
         self.text = ""

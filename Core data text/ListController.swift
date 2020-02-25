@@ -13,14 +13,17 @@ class ListController: UIViewController {
     
     var dataController = DataController.shared
     
-    var dataSource = UserDataSource<User>()
+    var userDataSource = UserDataSource<User>()
+    var userDelegate = UserDelegate<User>()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self.dataSource
+        tableView.dataSource = userDataSource
+        userDelegate.weakController = self
+        tableView.delegate = userDelegate
         
         UserCell.register(with: tableView)
         
@@ -28,22 +31,14 @@ class ListController: UIViewController {
             let users = try dataController.fetchUsers()
             print(users)
             
-            dataSource.data = users
+            userDataSource.data = users
             tableView.reloadData()
-            
-            
-            for user in users {
-                print(user.firstName)
-            }
-            
+
         }
         catch (let e) {
             print(e.localizedDescription)
         }
     }
- 
-    
-    
 }
 
 class UserCell: UITableViewCell {
