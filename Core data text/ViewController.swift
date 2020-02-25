@@ -10,9 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var dataController = DataController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        for i in 1...5 {
+            
+            
+            let u = User(context: dataController.context)
+            u.firstName = "Nasir \(i)"
+            u.lastName = "Momin \(i)"
+            u.username = "momin96 \(i)"
+            
+            let b = Book(context: dataController.context)
+            b.title = "A1 \(i)"
+            
+            do {
+                try dataController.inser(user: u, withBook: b)
+            }
+            catch (let err) {
+                print(err.localizedDescription)
+            }
+        }
+        
+        print("------\nUsers")
+        do {
+            let user = try dataController.fetchUsers()
+            print(user)
+        }
+        catch (let e) {
+            print(e.localizedDescription)
+        }
     }
 
 
