@@ -19,6 +19,10 @@
 		0E90CBF524050D33009ADA5C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CBF324050D33009ADA5C /* User+CoreDataProperties.swift */; };
 		0E90CBF824050D61009ADA5C /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CBF624050D61009ADA5C /* Book+CoreDataClass.swift */; };
 		0E90CBF924050D61009ADA5C /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CBF724050D61009ADA5C /* Book+CoreDataProperties.swift */; };
+		0E90CBFB24051F83009ADA5C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CBFA24051F83009ADA5C /* ListController.swift */; };
+		0E90CBFD24052641009ADA5C /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CBFC24052641009ADA5C /* DataSource.swift */; };
+		0E90CBFF240528B0009ADA5C /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E90CBFE240528B0009ADA5C /* UserCell.xib */; };
+		0E90CC03240535F6009ADA5C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E90CC02240535F6009ADA5C /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		0E90CBF324050D33009ADA5C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0E90CBF624050D61009ADA5C /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0E90CBF724050D61009ADA5C /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0E90CBFA24051F83009ADA5C /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		0E90CBFC24052641009ADA5C /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		0E90CBFE240528B0009ADA5C /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		0E90CC02240535F6009ADA5C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,10 @@
 				0E90CBD0240509F6009ADA5C /* AppDelegate.swift */,
 				0E90CBD2240509F6009ADA5C /* SceneDelegate.swift */,
 				0E90CBD4240509F6009ADA5C /* ViewController.swift */,
-				0E90CBF024050B26009ADA5C /* DataController.swift */,
+				0E90CBFA24051F83009ADA5C /* ListController.swift */,
+				0E90CC02240535F6009ADA5C /* extensions.swift */,
+				0E90CBFC24052641009ADA5C /* DataSource.swift */,
+				0E90CBFE240528B0009ADA5C /* UserCell.xib */,
 				0E90CBD6240509F6009ADA5C /* Main.storyboard */,
 				0E90CBD924050A19009ADA5C /* Assets.xcassets */,
 				0E90CBDB24050A19009ADA5C /* LaunchScreen.storyboard */,
@@ -89,6 +100,7 @@
 				0E90CBF224050D33009ADA5C /* User+CoreDataClass.swift */,
 				0E90CBF324050D33009ADA5C /* User+CoreDataProperties.swift */,
 				0E90CBE424050A4F009ADA5C /* UserLiberary.xcdatamodeld */,
+				0E90CBF024050B26009ADA5C /* DataController.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -151,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E90CBFF240528B0009ADA5C /* UserCell.xib in Resources */,
 				0E90CBDD24050A19009ADA5C /* LaunchScreen.storyboard in Resources */,
 				0E90CBDA24050A19009ADA5C /* Assets.xcassets in Resources */,
 				0E90CBD8240509F6009ADA5C /* Main.storyboard in Resources */,
@@ -165,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E90CBD5240509F6009ADA5C /* ViewController.swift in Sources */,
+				0E90CBFB24051F83009ADA5C /* ListController.swift in Sources */,
 				0E90CBF124050B26009ADA5C /* DataController.swift in Sources */,
 				0E90CBF924050D61009ADA5C /* Book+CoreDataProperties.swift in Sources */,
 				0E90CBF824050D61009ADA5C /* Book+CoreDataClass.swift in Sources */,
@@ -172,7 +186,9 @@
 				0E90CBF524050D33009ADA5C /* User+CoreDataProperties.swift in Sources */,
 				0E90CBD1240509F6009ADA5C /* AppDelegate.swift in Sources */,
 				0E90CBE624050A4F009ADA5C /* UserLiberary.xcdatamodeld in Sources */,
+				0E90CBFD24052641009ADA5C /* DataSource.swift in Sources */,
 				0E90CBD3240509F6009ADA5C /* SceneDelegate.swift in Sources */,
+				0E90CC03240535F6009ADA5C /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

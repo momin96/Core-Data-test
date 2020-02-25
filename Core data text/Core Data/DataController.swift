@@ -11,7 +11,9 @@ import CoreData
 
 class DataController {
     
-    var persistantContainer = NSPersistentContainer(name: "UserLiberary")
+    private var persistantContainer = NSPersistentContainer(name: "UserLiberary")
+    
+    static var shared = DataController()
     
     var context: NSManagedObjectContext {
         return persistantContainer.viewContext
