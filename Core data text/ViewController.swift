@@ -8,6 +8,15 @@
 
 import UIKit
 
+protocol DataManipulator {
+
+}
+extension DataManipulator {
+    var dataController: DataController {
+        return DataController.shared
+    }
+}
+
 class ViewController: UIViewController {
     
     
@@ -19,34 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        for i in 1...5 {
-        //
-        //
-        //            let u = User(context: dataController.context)
-        //            u.firstName = "Ayesh \(i)"
-        //            u.lastName = "Momin \(i)"
-        //            u.username = "Ayes \(i)"
-        //
-        //            let b = Book(context: dataController.context)
-        //            b.title = "A1 \(i)"
-        //
-        //            do {
-        //                try dataController.inser(user: u, withBook: b)
-        //            }
-        //            catch (let err) {
-        //                print(err.localizedDescription)
-        //            }
-        //        }
-        
-        //        print("------\nUsers")
-        //        do {
-        //            let user = try dataController.fetchUsers()
-        //            print(user)
-        //        }
-        //        catch (let e) {
-        //            print(e.localizedDescription)
-        //        }
+
     }
     
     
